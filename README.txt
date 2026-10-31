@@ -1,0 +1,1 @@
+Open index.html in your browser. This is a reference-inspired functional Stormfall Observatory homepage. The existing prototype subpages and Elderwild Atlas are retained. The interface is CSS-based, not a flattened screenshot. The exact requested tagline is used. Some realm navigation is provisional pending world pages.
