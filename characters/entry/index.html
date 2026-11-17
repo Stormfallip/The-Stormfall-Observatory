@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="../../">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Character | The Stormfall Observatory</title>
+  <link href="assets/site.css" rel="stylesheet">
+  <style>
+    .entry-profile { margin-top: 30px; }
+    .entry-profile .detail { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+    .entry-profile .detail > img { display: block; }
+    .entry-fields { margin: 16px 0 24px; }
+    .entry-fields > div {
+      display: grid;
+      grid-template-columns: minmax(7rem, 1fr) minmax(0, 2fr);
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .entry-fields dt { color: var(--gold); }
+    .entry-fields dd { margin: 0; }
+    .entry-section { margin-top: 38px; border-top: 1px solid var(--line); padding-top: 24px; }
+    .entry-section h2 { margin: 0 0 14px; font: normal 26px Georgia, serif; color: var(--gold); }
+    .entry-summary p { max-width: 74ch; }
+    .entry-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 14px;
+    }
+    .entry-gallery a { display: block; border: 1px solid var(--line); }
+    .entry-gallery img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+    .entry-gallery a:hover { border-color: var(--gold); }
+    .entry-gallery a:focus-visible, .entry-profile .back:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+    @media (max-width: 680px) {
+      .entry-profile .detail { grid-template-columns: 1fr; gap: 22px; }
+      .entry-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header class="top observatory-top">
+    <div class="wrap top-inner">
+      <a aria-label="Stormfall Observatory homepage" class="masthead" href="index.html">
+        <span class="masthead-kicker">THE</span>
+        <span class="masthead-name">STORMFALL</span>
+        <span class="masthead-sub">OBSERVATORY</span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="page active" id="character">
+      <div class="content wrap">
+        <a class="back" href="characters/index.html">← Back to the Character Archive</a>
+        <article id="characterDetail" class="entry-profile" hidden>
+          <div class="detail">
+            <img alt="">
+            <div>
+              <h1></h1>
+              <dl class="entry-fields"></dl>
+              <a class="back entry-dreamjourney">View Character on DreamJourney</a>
+            </div>
+          </div>
+          <section class="entry-section entry-summary" aria-labelledby="entry-summary">
+            <h2 id="entry-summary">Character Summary</h2>
+          </section>
+          <section class="entry-section" aria-labelledby="entry-gallery">
+            <h2 id="entry-gallery">Gallery</h2>
+            <div class="entry-gallery"></div>
+          </section>
+        </article>
+        <p id="profileMissing" hidden>Character profile unavailable.</p>
+        <noscript><p>Enable JavaScript to view this character profile.</p></noscript>
+      </div>
+    </div>
+  </main>
+  <footer class="footer new-footer inner-page-footer"><span>THE STORMFALL OBSERVATORY</span><span>Worlds · Characters · Lore</span></footer>
+  <script src="characters/roster.js"></script>
+  <script>
+    const id = new URLSearchParams(location.search).get('id');
+    const character = characterRoster.find(entry => entry.id === id);
+    if (character) {
+      document.title = character.name + ' | The Stormfall Observatory';
+      const root = document.getElementById('characterDetail');
+      root.querySelector('h1').textContent = character.name;
+      const portrait = root.querySelector('.detail > img');
+      portrait.src = character.gallery[0].src;
+      portrait.alt = character.gallery[0].label;
+      const fields = root.querySelector('dl');
+      for (const [label, value] of Object.entries(character.fields)) {
+        const row = document.createElement('div');
+        const term = document.createElement('dt');
+        const description = document.createElement('dd');
+        term.textContent = label;
+        description.textContent = value;
+        row.append(term, description);
+        fields.append(row);
+      }
+      root.querySelector('.entry-dreamjourney').href = character.dreamJourney;
+      const summary = root.querySelector('.entry-summary');
+      for (const text of character.summary) {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = text;
+        summary.append(paragraph);
+      }
+      const gallery = root.querySelector('.entry-gallery');
+      for (const photo of character.gallery) {
+        const link = document.createElement('a');
+        link.href = photo.src;
+        const image = document.createElement('img');
+        image.src = photo.src;
+        image.alt = photo.label;
+        image.loading = 'lazy';
+        link.append(image);
+        gallery.append(link);
+      }
+      root.hidden = false;
+    } else {
+      document.getElementById('profileMissing').hidden = false;
+    }
+  </script>
+</body>
+</html>
