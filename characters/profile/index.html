@@ -1,2 +1,124 @@
 <!DOCTYPE html>
-<html lang="en"><head><base href="../../"/><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Character | The Stormfall Observatory</title><link href="assets/site.css" rel="stylesheet"/></head><body><header class="top observatory-top"><div class="wrap top-inner"><a aria-label="Stormfall Observatory homepage" class="masthead" href="index.html"><span class="masthead-kicker">THE</span><span class="masthead-name">STORMFALL</span><span class="masthead-sub">OBSERVATORY</span></a></div></header><main><div class="page active" id="character"><div class="content wrap"><a class="back" href="characters/index.html">← Back to the Character Archive</a><div class="detail" id="characterDetail" style="margin-top:30px"></div></div></div></main><footer class="footer new-footer inner-page-footer"><span>THE STORMFALL OBSERVATORY</span><span>Worlds · Characters · Lore</span></footer><script>const chars={wesley:['Wesley Harlan','The Midnight Court','wesley.webp'],barbarian:['Fantasy Character','Fantasy','barbarian.webp'],benjamin:['Benjamin Carrick','Character Archive','benjamin.webp'],tobin:['Tobin Holt','Character Archive','tobin.webp']};let c=chars[new URLSearchParams(location.search).get('id')]||chars.wesley;document.getElementById('characterDetail').innerHTML=`<img src="assets/${c[2]}" alt="Portrait of ${c[0]}"><div><div class="eyebrow">${c[1]}</div><h1>${c[0]}</h1><h2>Character Profile</h2><p class="empty">Character information will be added here.</p></div>`;</script></body></html>
+<html lang="en">
+<head>
+  <base href="../../">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wesley Harlan | The Stormfall Observatory</title>
+  <link href="assets/site.css" rel="stylesheet">
+  <style>
+    .wesley-profile { margin-top: 30px; }
+    .wesley-profile .detail { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); }
+    .wesley-profile .detail > img { display: block; }
+    .wesley-fields { margin: 16px 0 24px; }
+    .wesley-fields > div {
+      display: grid;
+      grid-template-columns: minmax(7rem, 1fr) minmax(0, 2fr);
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .wesley-fields dt { color: var(--gold); }
+    .wesley-fields dd { margin: 0; }
+    .wesley-section { margin-top: 38px; border-top: 1px solid var(--line); padding-top: 24px; }
+    .wesley-section h2 { margin: 0 0 14px; font: normal 26px Georgia, serif; color: var(--gold); }
+    .wesley-summary p { max-width: 74ch; }
+    .wesley-gallery {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+    .wesley-gallery a { display: block; border: 1px solid var(--line); }
+    .wesley-gallery img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+    .wesley-gallery a:hover { border-color: var(--gold); }
+    .wesley-gallery a:focus-visible, .wesley-profile .back:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+    @media (max-width: 680px) {
+      .wesley-profile .detail { grid-template-columns: 1fr; gap: 22px; }
+      .wesley-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+  </style>
+</head>
+<body>
+  <header class="top observatory-top">
+    <div class="wrap top-inner">
+      <a aria-label="Stormfall Observatory homepage" class="masthead" href="index.html">
+        <span class="masthead-kicker">THE</span>
+        <span class="masthead-name">STORMFALL</span>
+        <span class="masthead-sub">OBSERVATORY</span>
+      </a>
+    </div>
+  </header>
+  <main>
+    <div class="page active" id="character">
+      <div class="content wrap">
+        <a class="back" href="characters/index.html">← Back to the Character Archive</a>
+        <div id="characterDetail">
+          <article class="wesley-profile">
+            <div class="detail">
+              <img src="assets/wesley-gallery/birthday.png" alt="Wesley grinning at his birthday celebration with a bloodied axe">
+              <div>
+                <h1>Wesley Harlan</h1>
+                <dl class="wesley-fields">
+                  <div><dt>Name</dt><dd>Wesley Harlan</dd></div>
+                  <div><dt>Alias</dt><dd>The Psychopath</dd></div>
+                  <div><dt>Age</dt><dd>26</dd></div>
+                  <div><dt>Gender</dt><dd>Male</dd></div>
+                  <div><dt>Height</dt><dd>6'2"</dd></div>
+                  <div><dt>Weight</dt><dd>Unspecified</dd></div>
+                  <div><dt>Occupation</dt><dd>Criminal enforcer</dd></div>
+                  <div><dt>Residence</dt><dd>Private wooded property outside the city</dd></div>
+                  <div><dt>World</dt><dd>The Midnight Court</dd></div>
+                  <div><dt>Collaboration</dt><dd>No (solo)</dd></div>
+                  <div><dt>Collaborator</dt><dd>N/A</dd></div>
+                </dl>
+                <a class="back" href="https://dreamjourneyai.com/creation/624b0ffd-90d4-4b11-8571-30844d27ade9">View Character on DreamJourney</a>
+              </div>
+            </div>
+            <section class="wesley-section wesley-summary" aria-labelledby="wesley-summary">
+              <h2 id="wesley-summary">Character Summary</h2>
+              <p>Wesley Harlan is twenty-six years old, devastatingly handsome, relentlessly cheerful, and one of the most dangerous members of the Midnight Court. With his tousled brown hair, warm brown eyes, muscular tattooed physique, and infectious grin, he looks more like someone who would invite you over for coffee and video games than a man who considers murder a perfectly acceptable form of entertainment.</p>
+              <p>The unsettling part is that he would genuinely enjoy both.</p>
+              <p>Orphaned at approximately five or six, Wesley was adopted by the previous Demon and raised collectively by the Midnight Court. His childhood was filled with education, affection, discipline, and criminal instruction. His sadistic tendencies existed long before his adoption, and the Court taught him to direct those impulses rather than eliminate them. As an adult, he serves as the Psychopath, a privileged operative whose supernatural designation permits extraordinary freedom to kill, provided he uses his signature axe.</p>
+              <p>Arresting him presents an equally ridiculous problem. Any authority attempting to take Wesley into custody must first defeat him at rock-paper-scissors, a contest he has never lost when his freedom is at stake.</p>
+              <p>Outside his criminal activities, Wesley enjoys an unexpectedly comfortable domestic life. He owns a four-bedroom home, drives a black Ford F-150, lifts weights, practices pole dancing, reads voraciously, plays video games, and collects an unreasonable number of blankets. He adores coffee, dogs, reptiles, and flowers, although his gardening abilities are considerably less impressive than his enthusiasm.</p>
+              <p>Wesley's affection is every bit as genuine as his cruelty. He can be generous, attentive, playful, and deeply devoted, but his possessiveness turns love into entitlement. Rejection and defiance can transform his cheerful demeanor into something cold, deliberate, and frighteningly violent.</p>
+              <p>Wesley does not misunderstand suffering, and his happiness is not a performance. He knows exactly what he is doing, enjoys himself immensely, and sees little reason why anyone else's objections should interfere.</p>
+              <p><strong>A charming smile, a bloodied axe, and absolutely no intention of apologizing.</strong></p>
+            </section>
+            <section class="wesley-section" aria-labelledby="wesley-gallery">
+              <h2 id="wesley-gallery">Gallery</h2>
+              <div class="wesley-gallery">
+                <a href="assets/wesley-gallery/birthday.png"><img src="assets/wesley-gallery/birthday.png" alt="Open Wesley’s birthday portrait" loading="lazy"></a>
+                <a href="assets/wesley-gallery/wesley1.png"><img src="assets/wesley-gallery/wesley1.png" alt="Open Wesley Harlan portrait 1" loading="lazy"></a>
+                <a href="assets/wesley-gallery/wesley2.png"><img src="assets/wesley-gallery/wesley2.png" alt="Open Wesley Harlan portrait 2" loading="lazy"></a>
+                <a href="assets/wesley-gallery/wesley3.png"><img src="assets/wesley-gallery/wesley3.png" alt="Open Wesley Harlan portrait 3" loading="lazy"></a>
+                <a href="assets/wesley-gallery/wesley4.png"><img src="assets/wesley-gallery/wesley4.png" alt="Open Wesley Harlan portrait 4" loading="lazy"></a>
+              </div>
+            </section>
+          </article>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer new-footer inner-page-footer"><span>THE STORMFALL OBSERVATORY</span><span>Worlds · Characters · Lore</span></footer>
+  <script>
+    const profiles = new Map([
+      ['barbarian', ['Fantasy Character', 'Fantasy', 'barbarian.webp']],
+      ['benjamin', ['Benjamin Carrick', 'Character Archive', 'benjamin.webp']],
+      ['tobin', ['Tobin Holt', 'Character Archive', 'tobin.webp']]
+    ]);
+    const profile = profiles.get(new URLSearchParams(location.search).get('id'));
+    if (profile) {
+      const [name, collection, image] = profile;
+      const detail = document.getElementById('characterDetail');
+      document.title = 'Character | The Stormfall Observatory';
+      detail.classList.add('detail');
+      detail.style.marginTop = '30px';
+      detail.innerHTML = `<img src="assets/${image}" alt="Portrait of ${name}"><div><div class="eyebrow">${collection}</div><h1>${name}</h1><h2>Character Profile</h2><p class="empty">Character information will be added here.</p></div>`;
+    }
+  </script>
+</body>
+</html>
