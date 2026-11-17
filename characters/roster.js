@@ -5,11 +5,11 @@ const characterRoster = [
     "collection": "Broken Pantheon · Hollowmere",
     "gallery": [
       {
-        "src": "assets/character-gallery/aristaeus/main.png",
+        "src": "character-gallery/aristaeus/main.jpg",
         "label": "Aristaeus portrait"
       },
       {
-        "src": "assets/character-gallery/aristaeus/aristaeus-god.png",
+        "src": "character-gallery/aristaeus/aristaeus-god.jpg",
         "label": "Aristaeus in divine form"
       }
     ],
@@ -39,11 +39,11 @@ const characterRoster = [
     "collection": "Broken Pantheon · Hollowmere",
     "gallery": [
       {
-        "src": "assets/character-gallery/deimos/main.png",
+        "src": "character-gallery/deimos/main.jpg",
         "label": "Deimos portrait"
       },
       {
-        "src": "assets/character-gallery/deimos/deimos-god.png",
+        "src": "character-gallery/deimos/deimos-god.jpg",
         "label": "Deimos in divine form"
       }
     ],
@@ -73,11 +73,11 @@ const characterRoster = [
     "collection": "Broken Pantheon · Hollowmere",
     "gallery": [
       {
-        "src": "assets/character-gallery/moros/main.png",
+        "src": "character-gallery/moros/main.jpg",
         "label": "Moros portrait"
       },
       {
-        "src": "assets/character-gallery/moros/moros-god.png",
+        "src": "character-gallery/moros/moros-god.jpg",
         "label": "Moros in divine form"
       }
     ],
@@ -107,51 +107,51 @@ const characterRoster = [
     "collection": "Final Fantasy VII",
     "gallery": [
       {
-        "src": "assets/character-gallery/dex/main.png",
+        "src": "character-gallery/dex/main.jpg",
         "label": "Dex portrait"
       },
       {
-        "src": "assets/character-gallery/dex/dex-full-body.png",
+        "src": "character-gallery/dex/dex-full-body.jpg",
         "label": "Dex - Full Body"
       },
       {
-        "src": "assets/character-gallery/dex/dex-shirtless.png",
+        "src": "character-gallery/dex/dex-shirtless.jpg",
         "label": "Dex - Shirtless"
       },
       {
-        "src": "assets/character-gallery/dex/dex-and-princess.png",
+        "src": "character-gallery/dex/dex-and-princess.jpg",
         "label": "Dex and Princess"
       },
       {
-        "src": "assets/character-gallery/dex/dex-and-the-crimson-widowmaker.png",
+        "src": "character-gallery/dex/dex-and-the-crimson-widowmaker.jpg",
         "label": "Dex and the Crimson Widowmaker"
       },
       {
-        "src": "assets/character-gallery/dex/princess.png",
+        "src": "character-gallery/dex/princess.jpg",
         "label": "Princess"
       },
       {
-        "src": "assets/character-gallery/dex/widowmaker.png",
+        "src": "character-gallery/dex/widowmaker.jpg",
         "label": "Widowmaker"
       },
       {
-        "src": "assets/character-gallery/dex/forgotten-child.png",
+        "src": "character-gallery/dex/forgotten-child.jpg",
         "label": "Forgotten Child"
       },
       {
-        "src": "assets/character-gallery/dex/forgotten-family.png",
+        "src": "character-gallery/dex/forgotten-family.jpg",
         "label": "Forgotten Family"
       },
       {
-        "src": "assets/character-gallery/dex/forgotten-wife.png",
+        "src": "character-gallery/dex/forgotten-wife.jpg",
         "label": "Forgotten Wife"
       },
       {
-        "src": "assets/character-gallery/dex/in-my-arms.png",
+        "src": "character-gallery/dex/in-my-arms.jpg",
         "label": "In my arms"
       },
       {
-        "src": "assets/character-gallery/dex/memory-in-my-arms.png",
+        "src": "character-gallery/dex/memory-in-my-arms.jpg",
         "label": "Memory in my arms"
       }
     ],
@@ -176,3 +176,4 @@ const characterRoster = [
     }
   }
 ];
+
